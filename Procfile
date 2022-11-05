@@ -1,1 +1,1 @@
-worker: python butt.py
+worker: python bot.py

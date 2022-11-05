@@ -17,11 +17,11 @@ def get_string(img_path):
     cv2.imwrite(img_path, img)
 
     # Uncomment the BELOW LINE when deploying on HEROKU
-    # pytesseract.pytesseract.tesseract_cmd = "/app/.apt/usr/bin/tesseract"   
-    
+    pytesseract.pytesseract.tesseract_cmd = "/app/.apt/usr/bin/tesseract"
+
     result = pytesseract.image_to_string(Image.open(img_path))
     return result
-    
+
 bot = commands.Bot(command_prefix='.', description="This is an OCR-Butt")
 
 # Events
@@ -48,6 +48,6 @@ async def on_message(message):
     except:
         pass
     await bot.process_commands(message)
-    
+
 # Addyout BOT TOKEN here
-bot.run('BOT_TOKEN')
+bot.run('BOT TOKEN HERE')
